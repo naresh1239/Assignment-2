@@ -24,7 +24,7 @@ import ModelBox from "./ModelBox";
 
 const Cards = ({data} : Props) => {
   const [UserData, setUserData] = useState<CardDataType[]>([...data])
-  const [selectedUser, setselectedUser] = useState<CardDataType>({});
+  const [selectedUser, setselectedUser] = useState<CardDataType>({} as CardDataType);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const likeUserFN = (id: number) => {
