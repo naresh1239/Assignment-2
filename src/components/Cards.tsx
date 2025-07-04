@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Card, Avatar, Row, Col, Typography, Space, Button } from "antd";
+import { useState } from "react";
+import { Card, Row, Col, Typography, Space } from "antd";
 import {
   MailOutlined,
   PhoneOutlined,
@@ -14,11 +14,7 @@ import {
 type Props={
   data: CardDataType[];
 }
-type user={
-  user: CardDataType;
-  deleteUserFN : (id : number) => void;
-  showModal : (user : CardDataType) => void;
-}
+
 const { Title, Text, Link } = Typography;
 
 
@@ -28,7 +24,7 @@ import ModelBox from "./ModelBox";
 
 const Cards = ({data} : Props) => {
   const [UserData, setUserData] = useState<CardDataType[]>([...data])
-  const [selectedUser, setselectedUser] = useState<CardDataType>();
+  const [selectedUser, setselectedUser] = useState<CardDataType>({});
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const likeUserFN = (id: number) => {
