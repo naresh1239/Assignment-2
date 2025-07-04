@@ -9,7 +9,7 @@ npm run build — Build production bundle
 npm run preview — Preview production build
 
 npm run lint — Run ESLint to check code style
-vist : - 
+vist : - https://assignment-2-beta-seven.vercel.app/
 Setup
 Install dependencies:
 
